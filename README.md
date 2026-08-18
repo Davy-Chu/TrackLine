@@ -84,4 +84,12 @@ Backend, from the repository root:
 .\.venv\Scripts\pytest backend
 ```
 
+Benchmark fixtures, from the repository root:
+
+```powershell
+.\.venv\Scripts\python -m research.evaluation.cli benchmarks\v1\development
+```
+
+The benchmark v1 contract and annotation rules are documented in `benchmarks/README.md`.
+
 The worker is an environment placeholder only. It does not claim or process research jobs yet.

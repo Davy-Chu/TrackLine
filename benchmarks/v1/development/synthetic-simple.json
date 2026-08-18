@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "benchmark_song_id": "synthetic-song-001",
+  "split": "development",
+  "annotation": {
+    "annotator": "Trackline synthetic fixture",
+    "annotated_at": "2026-08-18T00:00:00Z",
+    "status": "synthetic",
+    "notes": "Fictional data used only to test the benchmark validator."
+  },
+  "song_work": {
+    "canonical_title": "Signal in the Static",
+    "artists": ["The Example Artist"],
+    "aliases": ["Static Signal"]
+  },
+  "sources": [
+    {
+      "source_id": "synthetic-source-001",
+      "url": "https://example.com/trackline/synthetic-source",
+      "title": "Synthetic studio history",
+      "publisher": "Trackline Test Publisher",
+      "retrieved_at": "2026-08-18T00:00:00Z",
+      "content_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "retrieval_method": "recorded_fixture",
+      "retrieval_run_id": "synthetic-retrieval-001",
+      "evidence": [
+        {
+          "evidence_id": "evidence-demo-existed",
+          "locator": "Synthetic paragraph 1",
+          "excerpt": "The artist recorded an early solo demo before the final studio session.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-release-existed",
+          "locator": "Synthetic paragraph 2",
+          "excerpt": "The later studio recording was released as the official single.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-release-contributor",
+          "locator": "Synthetic credits table",
+          "excerpt": "The Example Artist: vocals; Example Producer: production.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-production-change",
+          "locator": "Synthetic paragraph 3",
+          "excerpt": "The official recording replaced the sparse demo backing with full production.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-relationship",
+          "locator": "Synthetic paragraph 4",
+          "excerpt": "The released recording was developed directly from the early demo.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-fan-edit",
+          "locator": "Synthetic upload note 1",
+          "excerpt": "The extended upload was assembled by a fan from the released recording.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-duplicate-upload",
+          "locator": "Synthetic upload note 2",
+          "excerpt": "The alternate upload contains the same audio as the official single.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        },
+        {
+          "evidence_id": "evidence-disputed-version",
+          "locator": "Synthetic paragraph 5",
+          "excerpt": "A rumored alternate vocal recording could not be independently verified.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "synthetic-annotation-001"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "benchmark_version_id": "version-early-demo",
+      "display_label": "Early solo demo",
+      "version_type": "demo",
+      "classification": "major",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["Early Solo Demo"],
+        "filenames": ["Signal in the Static Demo.wav"],
+        "external_ids": []
+      },
+      "contributors": [
+        {
+          "name": "The Example Artist",
+          "role": "vocals",
+          "evidence_ids": ["evidence-demo-existed"]
+        }
+      ],
+      "existence_evidence_ids": ["evidence-demo-existed"]
+    },
+    {
+      "benchmark_version_id": "version-official-release",
+      "display_label": "Official single",
+      "version_type": "official_release",
+      "classification": "major",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["Official Single"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "synthetic-catalog",
+            "value": "release-001"
+          }
+        ]
+      },
+      "contributors": [
+        {
+          "name": "The Example Artist",
+          "role": "vocals",
+          "evidence_ids": ["evidence-release-contributor"]
+        },
+        {
+          "name": "Example Producer",
+          "role": "production",
+          "evidence_ids": ["evidence-release-contributor"]
+        }
+      ],
+      "existence_evidence_ids": ["evidence-release-existed"]
+    }
+  ],
+  "candidate_expectations": [
+    {
+      "benchmark_candidate_id": "candidate-fan-edit",
+      "label": "Signal in the Static Extended",
+      "expected_decision": "rejected",
+      "reason": "fan_edit",
+      "reason_detail": null,
+      "merge_target_version_id": null,
+      "match_signals": {
+        "aliases": ["Signal in the Static Extended"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "evidence_ids": ["evidence-fan-edit"]
+    },
+    {
+      "benchmark_candidate_id": "candidate-duplicate-upload",
+      "label": "Static Signal Official Audio",
+      "expected_decision": "merged",
+      "reason": "same_audio_new_upload",
+      "reason_detail": null,
+      "merge_target_version_id": "version-official-release",
+      "match_signals": {
+        "aliases": ["Static Signal Official Audio"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "synthetic-video",
+            "value": "upload-002"
+          }
+        ]
+      },
+      "evidence_ids": ["evidence-duplicate-upload"]
+    }
+  ],
+  "changes": [
+    {
+      "benchmark_change_id": "change-full-production",
+      "from_version_id": "version-early-demo",
+      "to_version_id": "version-official-release",
+      "category": "production_changed",
+      "detail": "Full production replaced the sparse demo backing.",
+      "evidence_ids": ["evidence-production-change"]
+    }
+  ],
+  "relationships": [
+    {
+      "benchmark_relationship_id": "relationship-release-from-demo",
+      "subject_version_id": "version-official-release",
+      "relationship_type": "derived_from",
+      "object_version_id": "version-early-demo",
+      "certainty": "confirmed",
+      "evidence_ids": ["evidence-relationship"]
+    }
+  ],
+  "indeterminate_items": [
+    {
+      "benchmark_indeterminate_id": "indeterminate-alternate-vocal",
+      "scope": "version",
+      "description": "The public evidence does not establish whether the rumored alternate vocal existed.",
+      "evidence_ids": ["evidence-disputed-version"]
+    }
+  ]
+}
