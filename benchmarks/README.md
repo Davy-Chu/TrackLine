@@ -3,8 +3,8 @@
 The benchmark is the manually reviewed answer key used to evaluate Trackline's research
 pipeline. It is not the production database schema.
 
-Version 1 currently validates answer-key fixtures only. Prediction matching and metric scoring
-will be added separately after this contract is stable.
+Version 1 validates answer-key fixtures and defines a separate prediction snapshot used by the
+deterministic per-song scoring foundation. The formulas are documented in `METRICS.md`.
 
 ## Layout
 
@@ -61,6 +61,9 @@ From the repository root on Windows:
 
 The command exits with status `0` when every discovered JSON fixture passes and status `1`
 when a fixture or path fails validation.
+
+The full evaluation runner and corpus aggregation remain later build-order work. Current scoring
+is exercised through deterministic synthetic tests and does not call live providers or models.
 
 ## Adding a real fixture later
 

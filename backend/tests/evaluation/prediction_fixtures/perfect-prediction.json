@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "benchmark_song_id": "synthetic-song-001",
+  "run_id": "synthetic-run-perfect",
+  "run_status": "completed",
+  "outcome": "lineage_found",
+  "failure_reason": null,
+  "latency_ms": 1200,
+  "cost_usd": "0.05",
+  "source_count": 1,
+  "versions": [
+    {
+      "prediction_version_id": "prediction-early-demo",
+      "display_label": "Early solo demo",
+      "version_type": "demo",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["Early Solo Demo"],
+        "filenames": ["Signal in the Static Demo.wav"],
+        "external_ids": []
+      },
+      "contributors": [
+        {
+          "name": "The Example Artist",
+          "role": "vocals",
+          "evidence_ids": ["claim-demo-contributor"]
+        }
+      ],
+      "existence_evidence_ids": ["claim-demo-existence"]
+    },
+    {
+      "prediction_version_id": "prediction-official-release",
+      "display_label": "Official single",
+      "version_type": "official_release",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["Official Single"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "synthetic-catalog",
+            "value": "release-001"
+          }
+        ]
+      },
+      "contributors": [
+        {
+          "name": "The Example Artist",
+          "role": "vocals",
+          "evidence_ids": ["claim-release-artist"]
+        },
+        {
+          "name": "Example Producer",
+          "role": "production",
+          "evidence_ids": ["claim-release-producer"]
+        }
+      ],
+      "existence_evidence_ids": ["claim-release-existence"]
+    }
+  ],
+  "candidates": [
+    {
+      "prediction_candidate_id": "prediction-fan-edit",
+      "label": "Signal in the Static Extended",
+      "decision": "rejected",
+      "reason": "fan_edit",
+      "merge_target_prediction_version_id": null,
+      "match_signals": {
+        "aliases": ["Signal in the Static Extended"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "evidence_ids": ["claim-fan-edit"]
+    },
+    {
+      "prediction_candidate_id": "prediction-duplicate-upload",
+      "label": "Static Signal Official Audio",
+      "decision": "merged",
+      "reason": "same_audio_new_upload",
+      "merge_target_prediction_version_id": "prediction-official-release",
+      "match_signals": {
+        "aliases": ["Static Signal Official Audio"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "synthetic-video",
+            "value": "upload-002"
+          }
+        ]
+      },
+      "evidence_ids": ["claim-duplicate-upload"]
+    }
+  ],
+  "changes": [
+    {
+      "prediction_change_id": "prediction-production-change",
+      "from_prediction_version_id": "prediction-early-demo",
+      "to_prediction_version_id": "prediction-official-release",
+      "category": "production_changed",
+      "detail": "Full production replaced the sparse demo backing.",
+      "evidence_ids": ["claim-production-change"]
+    }
+  ],
+  "relationships": [
+    {
+      "prediction_relationship_id": "prediction-release-from-demo",
+      "subject_prediction_version_id": "prediction-official-release",
+      "relationship_type": "derived_from",
+      "object_prediction_version_id": "prediction-early-demo",
+      "certainty": "confirmed",
+      "evidence_ids": ["claim-release-from-demo"]
+    }
+  ]
+}
