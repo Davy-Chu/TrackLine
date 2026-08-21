@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "benchmark_song_id": "playboi-carti-not-real-molly",
+  "split": "development",
+  "annotation": {
+    "annotator": "OpenAI Codex draft research",
+    "annotated_at": "2026-08-20T23:45:49-04:00",
+    "status": "draft",
+    "notes": "Validation-only first-slice annotation. Requires second manual review; later reported studio variants remain unresolved."
+  },
+  "song_work": {
+    "canonical_title": "Not Real",
+    "artists": ["Playboi Carti"],
+    "aliases": ["Molly"]
+  },
+  "sources": [
+    {
+      "source_id": "not-real-kxsu-concert-report",
+      "url": "https://www.kxsu.org/2018/11/14/playboi-carti-instigated-an-insanely-riotous-show-last-week/",
+      "title": "Playboi Carti Instigated an Insanely Riotous Show Last Week",
+      "publisher": "KXSU",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:489314d21967dca8d8b3c999e0ba2ca0ef8cea06bdf5a7b92707a2d31ce7e210",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "not-real-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "not-real-live-preview",
+          "locator": "Concert report, line 68",
+          "excerpt": "One song, titled “Molly,” featured an oozy instrumental and eccentric vocal inflections.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "not-real-lastfm-alias",
+      "url": "https://www.last.fm/music/Playboi%20Carti/_/Not%20Real",
+      "title": "Not Real — Playboi Carti",
+      "publisher": "Last.fm community wiki",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:ed199420a1e962b73e932f7213442f9f97b3c675ade866cbf3e00fb8ec9a4631",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "not-real-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "not-real-molly-alias",
+          "locator": "Track description, line 72",
+          "excerpt": "referred to by fans as “Molly” before the real track name was known",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "not-real-fader-leak-report",
+      "url": "https://www.thefader.com/2019/08/27/leak-this-feature",
+      "title": "Leak This",
+      "publisher": "The FADER",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:de155254532fc71aa9b10a72325bf2dd518127759fcd8bc04deaaf155295c428",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "not-real-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "not-real-leak-name",
+          "locator": "Article paragraph, line 72",
+          "excerpt": "the unreleased Playboi Carti songs — “Molly,”",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "not-real-apple-page-appearance",
+          "locator": "Article paragraph, line 72",
+          "excerpt": "appeared on the rapper’s official Apple Music page",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "not-real-upload-method",
+          "locator": "Article paragraph, line 72",
+          "excerpt": "they did so through independent music distributor DistroKid",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "not-real-destmido-discussion",
+      "url": "https://www.reddit.com/r/playboicarti/comments/uuryao/what_happened_to_molly/",
+      "title": "What happened to molly?",
+      "publisher": "Reddit user discussion in r/playboicarti",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:45e493701788b367eaa34bd35c144e8da0da06670005a7168c271bfa0665a48b",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "not-real-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "not-real-fan-edit-identification",
+          "locator": "Comment thread",
+          "excerpt": "that was probably some kind of fan made edit",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "not-real-destmido-name",
+          "locator": "Same comment thread",
+          "excerpt": "are you thinking of the destmido remix?",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "not-real-v3-community-report",
+      "url": "https://www.reddit.com/r/playboicarti/comments/1jamwji/",
+      "title": "Not Real 5.23.19 (V3)",
+      "publisher": "Reddit user post in r/playboicarti",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:e2468eb0d6122af415fc1c8390b457ddc7d5b1854a60184e4eb9690787512a96",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "not-real-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "not-real-v3-report",
+          "locator": "Post body",
+          "excerpt": "This is the third version of Not Real.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "not-real-v3-filename",
+          "locator": "Post body",
+          "excerpt": "OG Filename: Not Real 5.23.19",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "not-real-annotation-2026-08-20"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "benchmark_version_id": "not-real-2018-recording",
+      "display_label": "2018 Not Real / Molly recording",
+      "version_type": "other",
+      "classification": "major",
+      "existence_confidence": "medium",
+      "match_signals": {
+        "aliases": ["Not Real", "Molly"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "contributors": [
+        {
+          "name": "Playboi Carti",
+          "role": "vocals",
+          "evidence_ids": ["not-real-live-preview"]
+        }
+      ],
+      "existence_evidence_ids": [
+        "not-real-live-preview",
+        "not-real-molly-alias",
+        "not-real-leak-name"
+      ]
+    }
+  ],
+  "candidate_expectations": [
+    {
+      "benchmark_candidate_id": "not-real-unauthorized-apple-upload",
+      "label": "Molly — unauthorized Apple Music upload",
+      "expected_decision": "merged",
+      "reason": "same_audio_new_upload",
+      "reason_detail": null,
+      "merge_target_version_id": "not-real-2018-recording",
+      "match_signals": {
+        "aliases": ["Molly — Apple Music upload"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "evidence_ids": [
+        "not-real-leak-name",
+        "not-real-apple-page-appearance",
+        "not-real-upload-method"
+      ]
+    },
+    {
+      "benchmark_candidate_id": "not-real-destmido-fan-edit",
+      "label": "Molly (Destmido remix)",
+      "expected_decision": "rejected",
+      "reason": "fan_edit",
+      "reason_detail": null,
+      "merge_target_version_id": null,
+      "match_signals": {
+        "aliases": ["Molly (Destmido remix)", "Molly (Destxmido remix)"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "evidence_ids": ["not-real-fan-edit-identification", "not-real-destmido-name"]
+    }
+  ],
+  "changes": [],
+  "relationships": [],
+  "indeterminate_items": [
+    {
+      "benchmark_indeterminate_id": "not-real-later-version-count",
+      "scope": "version",
+      "description": "Community reports describe later versions, but this draft cannot yet freeze their count, legitimacy, or distinct audio changes.",
+      "evidence_ids": ["not-real-v3-report", "not-real-v3-filename"]
+    },
+    {
+      "benchmark_indeterminate_id": "not-real-version-lineage",
+      "scope": "relationship",
+      "description": "The retained evidence does not establish canonical lineage edges among the reported studio variants.",
+      "evidence_ids": ["not-real-live-preview", "not-real-v3-report"]
+    }
+  ]
+}

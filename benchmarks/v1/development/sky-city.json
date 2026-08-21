@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "benchmark_song_id": "kanye-west-sky-city",
+  "split": "development",
+  "annotation": {
+    "annotator": "OpenAI Codex draft research",
+    "annotated_at": "2026-08-20T23:45:49-04:00",
+    "status": "draft",
+    "notes": "Validation-only first-slice annotation. Requires second manual review; archival version matching remains unresolved."
+  },
+  "song_work": {
+    "canonical_title": "Sky City",
+    "artists": ["Kanye West", "Ty Dolla $ign"],
+    "aliases": ["City in the Sky"]
+  },
+  "sources": [
+    {
+      "source_id": "sky-city-musicbrainz-release-group",
+      "url": "https://musicbrainz.org/release-group/cc052fe3-a705-4177-93ca-9098ff4b2f9e",
+      "title": "Release group SKY CITY by ¥$, 070 Shake & Desiigner feat. CyHi",
+      "publisher": "MusicBrainz",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:882e8b12de55460195c7b569d63351f73aaa1972296c5789deba946d9bcbc043",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "sky-city-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "sky-city-official-artists",
+          "locator": "Release group heading, lines 60-62",
+          "excerpt": "Release group by ¥$, 070 Shake & Desiigner feat. CyHi",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "sky-city-official-date",
+          "locator": "Official release table, lines 71-79",
+          "excerpt": "XW 2024-08-05 YZY 0748777740278",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "sky-city-musicbrainz-vultures-2",
+      "url": "https://musicbrainz.org/release/afc61300-f0b3-4597-9b98-8fdefbf88b05",
+      "title": "Release VULTURES 2 by ¥$",
+      "publisher": "MusicBrainz",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:32ec0220b84fc365cfb41057ffee86a4edc70b220e39d683de39e1e37e6b9663",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "sky-city-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "sky-city-older-yandhi-outro",
+          "locator": "Release annotation, line 77",
+          "excerpt": "Added the outro from older Yandhi versions of \"SKY CITY\" to the song",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "sky-city-ye-tracker-archive",
+      "url": "https://pablaudio.neocities.org/Ye%20Tracker%20_%20Unreleased",
+      "title": "Ye Tracker Unreleased archive",
+      "publisher": "Ye Tracker community archive",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:f77c261e8c76068bfa159996c291ef5297b1eb19e0d582c21813d4e9969b46e0",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "sky-city-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "sky-city-tracker-version-count",
+          "locator": "Archived Yandhi section, lines 5567-5629",
+          "excerpt": "Sky City, City In The Sky (8)",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "sky-city-tracker-v2-label",
+          "locator": "Archived Yandhi section, lines 5577-5583",
+          "excerpt": "Sky City [V2] Lossless",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "sky-city-tracker-v2-credits",
+          "locator": "Archived Yandhi section, lines 5579-5580",
+          "excerpt": "(feat. Ty Dolla $ign, Ant Clemons, Desiigner & 070 Shake) (prod. MIKE DEAN)",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "sky-city-annotation-2026-08-20"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "benchmark_version_id": "sky-city-official-2024",
+      "display_label": "2024 official release",
+      "version_type": "official_release",
+      "classification": "major",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["SKY CITY", "Sky City official release"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "musicbrainz_release_group",
+            "value": "cc052fe3-a705-4177-93ca-9098ff4b2f9e"
+          }
+        ]
+      },
+      "contributors": [
+        {
+          "name": "Kanye West",
+          "role": "vocals",
+          "evidence_ids": ["sky-city-official-artists"]
+        },
+        {
+          "name": "Ty Dolla $ign",
+          "role": "vocals",
+          "evidence_ids": ["sky-city-official-artists"]
+        },
+        {
+          "name": "070 Shake",
+          "role": "vocals",
+          "evidence_ids": ["sky-city-official-artists"]
+        },
+        {
+          "name": "Desiigner",
+          "role": "vocals",
+          "evidence_ids": ["sky-city-official-artists"]
+        },
+        {
+          "name": "CyHi",
+          "role": "vocals",
+          "evidence_ids": ["sky-city-official-artists"]
+        }
+      ],
+      "existence_evidence_ids": ["sky-city-official-artists", "sky-city-official-date"]
+    }
+  ],
+  "candidate_expectations": [],
+  "changes": [],
+  "relationships": [],
+  "indeterminate_items": [
+    {
+      "benchmark_indeterminate_id": "sky-city-archival-version-count",
+      "scope": "version",
+      "description": "The archive lists multiple Sky City variants, but this draft does not establish which are distinct legitimate audio iterations.",
+      "evidence_ids": [
+        "sky-city-tracker-version-count",
+        "sky-city-tracker-v2-label",
+        "sky-city-tracker-v2-credits"
+      ]
+    },
+    {
+      "benchmark_indeterminate_id": "sky-city-archival-lineage",
+      "scope": "relationship",
+      "description": "The official release uses an outro from older Yandhi versions, but the direct archival predecessor is not established.",
+      "evidence_ids": ["sky-city-older-yandhi-outro"]
+    }
+  ]
+}

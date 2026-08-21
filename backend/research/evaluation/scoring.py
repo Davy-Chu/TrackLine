@@ -76,6 +76,11 @@ def evaluate_song(
 ) -> SongEvaluationReport:
     """Score one immutable prediction snapshot against one gold fixture."""
 
+    if gold.annotation.status == "draft":
+        raise ValueError(
+            "draft benchmark fixtures are validation-only and cannot be scored"
+        )
+
     if gold.benchmark_song_id != prediction.benchmark_song_id:
         raise ValueError(
             "benchmark_song_id mismatch: "

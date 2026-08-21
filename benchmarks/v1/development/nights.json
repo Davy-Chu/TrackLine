@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "benchmark_song_id": "frank-ocean-nights",
+  "split": "development",
+  "annotation": {
+    "annotator": "OpenAI Codex draft research",
+    "annotated_at": "2026-08-20T23:45:49-04:00",
+    "status": "draft",
+    "notes": "Validation-only first-slice annotation. Requires second manual review; demo lineage remains unresolved."
+  },
+  "song_work": {
+    "canonical_title": "Nights",
+    "artists": ["Frank Ocean"],
+    "aliases": ["Night.s"]
+  },
+  "sources": [
+    {
+      "source_id": "nights-musicbrainz-recording",
+      "url": "https://musicbrainz.org/recording/3e341bc1-16e2-43e3-adf5-d7a8c2059b0d",
+      "title": "Recording Nights by Frank Ocean",
+      "publisher": "MusicBrainz",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:5ade1426e88b51696121d7bd5fd0070fc2fbc6d48fb98cbf3c1196aedbf5d691",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "nights-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "nights-official-recording",
+          "locator": "Recording heading, lines 60-62",
+          "excerpt": "Nights — Recording by Frank Ocean",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        },
+        {
+          "evidence_id": "nights-official-producers",
+          "locator": "Recording relationships, lines 101-107",
+          "excerpt": "producer: Joe Thornalley (UK producer and DJ) Frank Ocean Buddy Ross (US producer Josiah Sherman) Michael Uzowuru",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "nights-apple-music",
+      "url": "https://music.apple.com/pg/song/nights/1146195720",
+      "title": "Nights — Song by Frank Ocean",
+      "publisher": "Apple Music",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:c0adce08c8647c5e0724656e9910d38a7cc65c647e10ea45104d951609af5f87",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "nights-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "nights-official-release-date",
+          "locator": "Song heading, lines 10-14",
+          "excerpt": "Nights — Blonde · Frank Ocean · 20 August 2016",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "nights-soundcloud-demo",
+      "url": "https://soundcloud.com/wadtkemusic/frank-ocean-nights-demo",
+      "title": "Frank Ocean - Nights (Demo)",
+      "publisher": "SoundCloud uploader circled",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:e65769e931f40073f53601b18d12a0e4c8b491308d2a01a458065939926273c7",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "nights-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "nights-demo-differences",
+          "locator": "Track description, lines 9-13",
+          "excerpt": "Demo version of Frank Ocean's \"Nights.\" This includes two new verses, and a handful of other small changes.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "nights-blonded-archive",
+      "url": "https://blonded.blog/news/frank-oceans-tumblr-hacked",
+      "title": "SpirDark hacks Frank Ocean's Tumblr",
+      "publisher": "blonded.blog",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:7352025bf2eec4c2e0640d9f86590eb6f1191acf39b6c51b94a5f778a26cdf4b",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "nights-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "nights-demo-leak-record",
+          "locator": "Article summary",
+          "excerpt": "It is this hacker that leaked the demo version of “Nights.”",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        }
+      ]
+    },
+    {
+      "source_id": "nights-extended-edit-post",
+      "url": "https://www.reddit.com/r/FrankOcean/comments/1536ohl/nights_extended_best_quality/",
+      "title": "Nights [Extended] (Best Quality)",
+      "publisher": "Reddit user post in r/FrankOcean",
+      "retrieved_at": "2026-08-20T23:45:49-04:00",
+      "content_hash": "sha256:f90b45a39f2f415c4ec48551e7fe5eb161ae38b0fe397e339b61c91002e4e535",
+      "retrieval_method": "manual",
+      "retrieval_run_id": "nights-retrieval-2026-08-20",
+      "evidence": [
+        {
+          "evidence_id": "nights-extended-edit-construction",
+          "locator": "Post body",
+          "excerpt": "Mixed the demo with the studio version.",
+          "extraction_method": "manual_annotation",
+          "extraction_run_id": "nights-annotation-2026-08-20"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "benchmark_version_id": "nights-circulated-demo",
+      "display_label": "Circulated demo",
+      "version_type": "demo",
+      "classification": "major",
+      "existence_confidence": "medium",
+      "match_signals": {
+        "aliases": ["Nights (Demo)", "Frank Ocean - Nights (Demo)"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "contributors": [
+        {
+          "name": "Frank Ocean",
+          "role": "vocals",
+          "evidence_ids": ["nights-demo-differences"]
+        }
+      ],
+      "existence_evidence_ids": ["nights-demo-differences", "nights-demo-leak-record"]
+    },
+    {
+      "benchmark_version_id": "nights-official-2016",
+      "display_label": "2016 Blonde release",
+      "version_type": "official_release",
+      "classification": "major",
+      "existence_confidence": "high",
+      "match_signals": {
+        "aliases": ["Nights", "Nights (Blonde)"],
+        "filenames": [],
+        "external_ids": [
+          {
+            "provider": "musicbrainz_recording",
+            "value": "3e341bc1-16e2-43e3-adf5-d7a8c2059b0d"
+          },
+          {
+            "provider": "apple_music_song",
+            "value": "1146195720"
+          }
+        ]
+      },
+      "contributors": [
+        {
+          "name": "Frank Ocean",
+          "role": "vocals",
+          "evidence_ids": ["nights-official-recording"]
+        },
+        {
+          "name": "Frank Ocean",
+          "role": "production",
+          "evidence_ids": ["nights-official-producers"]
+        },
+        {
+          "name": "Joe Thornalley",
+          "role": "production",
+          "evidence_ids": ["nights-official-producers"]
+        },
+        {
+          "name": "Buddy Ross",
+          "role": "production",
+          "evidence_ids": ["nights-official-producers"]
+        },
+        {
+          "name": "Michael Uzowuru",
+          "role": "production",
+          "evidence_ids": ["nights-official-producers"]
+        }
+      ],
+      "existence_evidence_ids": ["nights-official-recording", "nights-official-release-date"]
+    }
+  ],
+  "candidate_expectations": [
+    {
+      "benchmark_candidate_id": "nights-extended-fan-edit",
+      "label": "Nights [Extended] (Best Quality)",
+      "expected_decision": "rejected",
+      "reason": "fan_edit",
+      "reason_detail": null,
+      "merge_target_version_id": null,
+      "match_signals": {
+        "aliases": ["Nights [Extended]", "Nights Extended Best Quality"],
+        "filenames": [],
+        "external_ids": []
+      },
+      "evidence_ids": ["nights-extended-edit-construction"]
+    }
+  ],
+  "changes": [
+    {
+      "benchmark_change_id": "nights-demo-verses-removed",
+      "from_version_id": "nights-circulated-demo",
+      "to_version_id": "nights-official-2016",
+      "category": "lyrics_changed",
+      "detail": "The official release omits two verses present in the circulated demo.",
+      "evidence_ids": ["nights-demo-differences"]
+    }
+  ],
+  "relationships": [],
+  "indeterminate_items": [
+    {
+      "benchmark_indeterminate_id": "nights-demo-direct-lineage",
+      "scope": "relationship",
+      "description": "The retained sources establish a demo and an official release but not a direct lineage edge between them.",
+      "evidence_ids": ["nights-demo-differences", "nights-official-recording"]
+    }
+  ]
+}

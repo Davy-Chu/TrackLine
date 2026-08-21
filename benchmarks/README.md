@@ -18,6 +18,11 @@ benchmarks/
 Each JSON file describes one artist-specific `SongWork`. The included
 `synthetic-simple.json` fixture is fictional and exists only to test the validator.
 
+The real fixtures currently in `development` are drafts. Draft fixtures are validation-only:
+they may exercise the annotation contract, but the scorer rejects them until a second manual
+review changes their annotation status to `reviewed`. This prevents unresolved indeterminate
+matching from affecting benchmark metrics.
+
 ## Annotation rules
 
 - Use `schema_version: "1.0"`.
@@ -50,6 +55,10 @@ particular, keep these forms of support separate:
 A source records its identity, retrieval time, content hash, retrieval method/run, and short
 evidence excerpts with precise locators and extraction method/run. Do not store entire source
 pages or copyrighted audio in benchmark fixtures.
+
+For manually retrieved benchmark sources that retain only excerpts, `content_hash` is the
+SHA-256 of the UTF-8 evidence excerpts joined in fixture order with a single newline. This makes
+the retained representation reproducible without storing the source page.
 
 ## Validate fixtures
 

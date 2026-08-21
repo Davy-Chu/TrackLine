@@ -13,6 +13,7 @@ aggregation and the full evaluation runner remain later build-order work.
 - **Gold fixture:** the manually reviewed `BenchmarkSong` answer key.
 - **Prediction snapshot:** the immutable `SongPrediction` emitted by one recorded run.
 - The two inputs must have the same `benchmark_song_id`.
+- Draft gold fixtures are validation-only and cannot be scored.
 - Gold `indeterminate_items` remain visible in diagnostics but are not ordinary positives or
   negatives.
 

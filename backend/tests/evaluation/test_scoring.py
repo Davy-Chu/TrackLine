@@ -239,3 +239,12 @@ def test_rejects_prediction_for_different_benchmark_song() -> None:
 
     with pytest.raises(ValueError, match="benchmark_song_id mismatch"):
         evaluate_song(gold_benchmark(), SongPrediction.model_validate(payload))
+
+
+def test_rejects_draft_gold_fixture() -> None:
+    gold = gold_benchmark()
+    draft_annotation = gold.annotation.model_copy(update={"status": "draft"})
+    draft_gold = gold.model_copy(update={"annotation": draft_annotation})
+
+    with pytest.raises(ValueError, match="draft benchmark fixtures are validation-only"):
+        evaluate_song(draft_gold, perfect_prediction())
